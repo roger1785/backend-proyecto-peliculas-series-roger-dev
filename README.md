@@ -1,4 +1,4 @@
-# Backend Proyecto peliculas y series - Jean Paul
+# Backend Proyecto peliculas y series - Roger
 
 ## Instalación
 
