@@ -8,6 +8,7 @@ import connectDB from "./src/config/db.js";
 connectDB();
 
 import movieRouter from "./src/routes/movie.router.js";
+import authRouter from ".";
 
 const app = express();
 
@@ -19,6 +20,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/api/movies", movieRouter);
+app.use("/api/auth/register", movieRouter);
 
 const PORT = process.env.PORT || 3001;
 

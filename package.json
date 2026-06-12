@@ -1,5 +1,5 @@
 {
-  "name": "backend-proyecto-peliculas-series-jean-paul",
+  "name": "backend-proyecto-peliculas-series-roger-dev",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,13 +7,15 @@
     "start": "node index.js",
     "dev": "node --watch index.js"
   },
-  "author": "Jean Paul Ferreira",
+  "author": "Rogelio González",
   "license": "MIT",
   "type": "module",
   "dependencies": {
+    "bcryptjs": "^3.0.3",
     "cors": "^2.8.6",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
     "mongoose": "^9.6.3"
   }
 }
