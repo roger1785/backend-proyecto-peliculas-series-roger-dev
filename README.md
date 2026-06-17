@@ -1,4 +1,4 @@
-# Backend Proyecto peliculas y series - Roger
+# Backend Proyecto peliculas y series - Jean Paul
 
 ## Instalación
 
@@ -42,6 +42,14 @@
    ```bash
    npm run dev
    ```
+
+## Seeders
+
+Si deseas poblar la base de datos con datos de ejemplo, puedes ejecutar el seeder:
+
+```bash
+npm run seed
+```
 
 ## Uso
 

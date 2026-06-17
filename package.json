@@ -1,13 +1,15 @@
 {
-  "name": "backend-proyecto-peliculas-series-roger-dev",
+  "name": "backend-proyecto-peliculas-series-jean-paul",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "dev": "node --watch index.js"
+    "dev": "node --watch index.js",
+    "seed": "node src/seeders/movie.seeder.js",
+    "test": "mocha --require test/setup.js --exit"
   },
-  "author": "Rogelio González",
+  "author": "Jean Paul Ferreira",
   "license": "MIT",
   "type": "module",
   "dependencies": {
@@ -17,5 +19,10 @@
     "express": "^5.2.1",
     "jsonwebtoken": "^9.0.3",
     "mongoose": "^9.6.3"
+  },
+  "devDependencies": {
+    "chai": "^6.2.2",
+    "mocha": "^11.7.6",
+    "supertest": "^7.2.2"
   }
 }

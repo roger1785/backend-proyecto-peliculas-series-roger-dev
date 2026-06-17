@@ -1,26 +1,7 @@
 import dotenv from "dotenv";
-import express from "express";
-import cors from "cors";
-
 dotenv.config();
 
-import connectDB from "./src/config/db.js";
-connectDB();
-
-import movieRouter from "./src/routes/movie.router.js";
-import authRouter from ".";
-
-const app = express();
-
-app.use(express.json());
-app.use(cors());
-
-app.get("/", (req, res) => {
-  res.json({ message: "Bienvenidos a la API de películas y series" });
-});
-
-app.use("/api/movies", movieRouter);
-app.use("/api/auth/register", movieRouter);
+import app from "./app.js";
 
 const PORT = process.env.PORT || 3001;
 
