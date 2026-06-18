@@ -20,11 +20,13 @@ describe("Auth User", function () {
     const response = await request(app).post("/api/auth/register").send(user);
 
     expect(response.status).to.equal(201);
+    expect(response.body).to.have.property(
+      "message",
+      "Usuario registrado correctamente",
+    );
   });
 
-  test("deberia retornar 400 si el usuario existe", async () => {
-    await User.deleteMany({ email: "user@test.com" });
-
+  test("deberia retornar 400 si el usuario ya existe", async () => {
     const user = {
       name: "User",
       email: "user@test.com",
@@ -40,14 +42,14 @@ describe("Auth User", function () {
     );
   });
 
-  test("deberia retornar 400 si el usuario existe", async () => {
-    await User.deleteMany({ email: "user@test.com" });
-
+  test("deberia retornar un token y si el email y password son correctos", async () => {
     const user = {
       email: "user@test.com",
       password: "abc.123-",
     };
+
     const response = await request(app).post("/api/auth/login").send(user);
+
     expect(response.status).to.equal(200);
     expect(response.body).to.have.property("token");
   });
